@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQUERY IMAGE BOARD</title>
+	<link rel="stylesheet" type="text/css" href="node_modules/ionicons/css/ionicons.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Istok+Web|Comfortaa|Droid+Sans+Mono|Antic|Cabin|Carme|Chivo|Coda" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="/styles/main.sass.css">
+</head>
+<body>
+	<header>
+		<button id="plusBtn" class="icon ion-ios-plus"><span> add</span></button>
+	</header>  
+	<form id="photoForm">
+		<input id="photoUrl" type="url" placeholder="Image URL">
+		<textarea id="photoCaption" type="text" placeholder="Image Caption"></textarea>
+		<div id="container">
+			<button id="cancelBtn">CANCEL</button>
+			<button id="addBtn" class="ion-image"> ADD IMAGE</button>		
+		</div>
+		<section id="imageWindow">
+		</section>
+	</form>
+
+   	<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="scripts/main.js"></script>
+</body>
+</html>
