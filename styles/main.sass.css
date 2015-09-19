@@ -3,11 +3,11 @@ body {
   background: #E0E1E2; }
 
 header {
-  background: #444B6E;
+  background: #243438;
   padding: .7em; }
 
 #plusBtn {
-  background: #444B6E;
+  background: #243438;
   border: none;
   border-radius: .2em;
   outline: none;
@@ -20,19 +20,53 @@ header {
   background: #3071A9;
   cursor: pointer; }
 
-#photoForm {
-  background-color: #fff;
+#photoForm, #loginForm {
+  background-color: #C8D4D0;
   padding: 3.5em 0;
   display: none; }
+
+#loginForm {
+  background-color: #C8D4D0;
+  margin: 0 auto;
+  font-family: Coda, Arial, sans-serif;
+  clear: right; }
+
+#username, #password {
+  width: 30%;
+  height: 3em;
+  border: .2em solid white;
+  background-color: #C8D4D0; }
 
 #photoUrl, #photoCaption {
   width: 75%;
   display: block;
   padding: 1.5em;
   margin: 0 auto;
-  border: 0.1em solid #A9A9A9;
+  border: .2em solid white;
+  background-color: #C8D4D0;
   margin-bottom: 1em;
   font-size: .7em; }
+
+#loginBtn {
+  background: #243438;
+  border: none;
+  border-radius: .2em;
+  outline: none;
+  color: #E0E1E2;
+  font-size: 1.5em;
+  font-family: Coda, Arial, sans-serif;
+  margin-left: 2em;
+  float: right; }
+
+label {
+  display: block;
+  text-align: center;
+  margin-bottom: .5em;
+  color: #fff; }
+
+#loginBtn:hover {
+  background: #3071A9;
+  cursor: pointer; }
 
 #container {
   width: 79%;
@@ -65,9 +99,7 @@ img {
 #imageWindow {
   width: 100%;
   max-width: 54em;
-  margin: 0 auto;
-  margin-top: 1em;
-  background-color: #E0E1E2; }
+  margin: 0 auto; }
 
 .images, .captions {
   width: 80%;
@@ -82,3 +114,7 @@ img {
   padding: 1em;
   margin-bottom: 1em;
   font-family: Coda, Arial, sans-serif; }
+
+@media screen and (min-width: 62em) {
+  #imageWindow {
+    background-color: grey; } }

@@ -4,14 +4,21 @@
 $(document).ready(function () {
 
     var $photoForm = $('#photoForm');
+    var $loginForm = $('#loginForm');
     var $photoUrl = $('#photoUrl');
     var $photoCaption = $('#photoCaption');
     var $imageWindow = $('#imageWindow');
     var url = 'http://tiyfe.herokuapp.com/collections/g1';
 
+    $('#loginBtn').click(function () {
+        console.log('log clicked');
+        $loginForm.toggle('slow');
+    });
+
     $('#plusBtn').click(function () {
         $photoForm.toggle('slow');
     });
+
     function photos() {
         $photoUrl = $photoUrl.val('');
         $photoCaption = $photoCaption.val('');
@@ -26,13 +33,11 @@ $(document).ready(function () {
         $photoForm.hide('slow');
         var imgUrl = $photoUrl.val();
         var caption = $photoCaption.val();
-        console.log(imgUrl);
-        console.log(caption);
         $.post(url, {
             imgUrl: imgUrl,
             caption: caption
-        }, function (data) {
-            $imageWindow.append('<div class="images"><img src="' + data.imgUrl + '"></div><div class="captions">' + data.caption + '</div>');
+        }, function (imgcap) {
+            $imageWindow.append('<div class="images"><img src="' + imgcap.imgUrl + '"></div><div class="captions">' + imgcap.caption + '</div>');
         });
     });
     $.get(url, function (imgcap) {
